@@ -2,9 +2,7 @@ source :rubygems
  
 gem "sinatra"
 gem "thin"
-gem "sqlite3"
 gem "datamapper"
-gem "dm-sqlite-adapter"
 gem "dm-postgres-adapter"
 gem "sinatra-flash"
 gem "sinatra-authentication"
@@ -16,4 +14,6 @@ gem 'trollop'
 group :development do
   gem "shotgun"
   gem "tux"
+  gem "sqlite3"
+  gem "dm-sqlite-adapter"
 end

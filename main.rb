@@ -24,7 +24,7 @@ end
 configure :production do
   DataMapper.setup(
     :default,
-    'postgres://postgres:12345@localhost/sinatra_service'
+    ENV['HEROKU_POSTGRESQL_NAVY_URL']
   )
 end
 
