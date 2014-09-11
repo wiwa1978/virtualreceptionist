@@ -4,7 +4,7 @@ require 'twilio-ruby'
  
 default_client = "virtualreceptionist"
  
-get '/twilio' do
+get '/client' do
     TWILIO_ACCOUNT_SID  =   ENV['TWILIO_ACCOUNT_SID'] || TWILIO_ACCOUNT_SID
     TWILIO_AUTH_TOKEN   =   ENV['TWILIO_AUTH_TOKEN'] || TWILIO_AUTH_TOKEN
     TWILIO_APP_SID      =   ENV['TWILIO_APP_SID'] || TWILIO_APP_SID
