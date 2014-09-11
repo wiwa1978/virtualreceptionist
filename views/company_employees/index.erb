@@ -1,0 +1,11 @@
+<h1><%= @company.name %></h1>
+<%= @commpany.body %>
+
+<% @post.comments.each do |comment| %>
+  <p><%= comment.name %><br /><%= comment.body %></p>
+
+  <form action="/comment/<%= comment.id %>" method="post">
+    <input type="hidden" name="_method" value="delete" />
+    <input type="submit" value="Delete comment">
+  </form>
+<% end %>

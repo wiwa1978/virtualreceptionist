@@ -1,0 +1,88 @@
+
+I, [2014-09-05T14:22:22.868545 #41989]  INFO -- : [#<Company @id=1 @name="Cisco Systems" @created_at=#<DateTime: 2014-09-04T06:03:26+02:00 ((2456905j,14606s,0n),+7200s,2299161j)> @updated_at=#<DateTime: 2014-09-04T06:03:26+02:00 ((2456905j,14606s,0n),+7200s,2299161j)>>, #<Company @id=2 @name="Ontex International" @created_at=#<DateTime: 2014-09-04T06:03:44+02:00 ((2456905j,14624s,0n),+7200s,2299161j)> @updated_at=#<DateTime: 2014-09-04T06:14:37+02:00 ((2456905j,15277s,0n),+7200s,2299161j)>>]
+
+
+I, [2014-09-05T14:23:01.840914 #41996]  INFO -- : #<Company @id=2 @name="Ontex International" @created_at=#<DateTime: 2014-09-04T06:03:44+02:00 ((2456905j,14624s,0n),+7200s,2299161j)> @updated_at=#<DateTime: 2014-09-04T06:14:37+02:00 ((2456905j,15277s,0n),+7200s,2299161j)>>
+I, [2014-09-05T14:26:04.287608 #42027]  INFO -- : Calling the index page
+I, [2014-09-05T14:26:04.296279 #42027]  INFO -- : #<Company @id=1 @name="Cisco Systems" @created_at=#<DateTime: 2014-09-04T06:03:26+02:00 ((2456905j,14606s,0n),+7200s,2299161j)> @updated_at=#<DateTime: 2014-09-04T06:03:26+02:00 ((2456905j,14606s,0n),+7200s,2299161j)>>
+I, [2014-09-05T14:26:28.337448 #42032]  INFO -- : Calling the index page
+I, [2014-09-05T14:26:28.349016 #42032]  INFO -- : #<Company @id=1 @name="Cisco Systems" @created_at=#<DateTime: 2014-09-04T06:03:26+02:00 ((2456905j,14606s,0n),+7200s,2299161j)> @updated_at=#<DateTime: 2014-09-04T06:03:26+02:00 ((2456905j,14606s,0n),+7200s,2299161j)>>
+I, [2014-09-05T14:26:43.037740 #42041]  INFO -- : Calling the index page
+I, [2014-09-05T14:26:43.038011 #42041]  INFO -- : [#<Company @id=1 @name="Cisco Systems" @created_at=#<DateTime: 2014-09-04T06:03:26+02:00 ((2456905j,14606s,0n),+7200s,2299161j)> @updated_at=#<DateTime: 2014-09-04T06:03:26+02:00 ((2456905j,14606s,0n),+7200s,2299161j)>>, #<Company @id=2 @name="Ontex International" @created_at=#<DateTime: 2014-09-04T06:03:44+02:00 ((2456905j,14624s,0n),+7200s,2299161j)> @updated_at=#<DateTime: 2014-09-04T06:14:37+02:00 ((2456905j,15277s,0n),+7200s,2299161j)>>]
+I, [2014-09-05T14:27:24.181112 #42049]  INFO -- : Calling the index page
+I, [2014-09-05T14:28:54.514048 #42059]  INFO -- : Calling the index page
+I, [2014-09-05T14:28:59.071353 #42063]  INFO -- : Calling the index page
+I, [2014-09-05T14:29:02.651645 #42068]  INFO -- : Calling the index page
+I, [2014-09-05T14:29:02.652635 #42068]  INFO -- : [#<Company @id=1 @name="Cisco Systems" @created_at=#<DateTime: 2014-09-04T06:03:26+02:00 ((2456905j,14606s,0n),+7200s,2299161j)> @updated_at=#<DateTime: 2014-09-04T06:03:26+02:00 ((2456905j,14606s,0n),+7200s,2299161j)>>, #<Company @id=2 @name="Ontex International" @created_at=#<DateTime: 2014-09-04T06:03:44+02:00 ((2456905j,14624s,0n),+7200s,2299161j)> @updated_at=#<DateTime: 2014-09-04T06:14:37+02:00 ((2456905j,15277s,0n),+7200s,2299161j)>>]
+I, [2014-09-05T14:29:28.988790 #42075]  INFO -- : Calling the index page
+I, [2014-09-05T14:29:35.840654 #42080]  INFO -- : Calling the index page
+I, [2014-09-05T14:29:39.145409 #42084]  INFO -- : Calling the index page
+I, [2014-09-05T14:29:44.478206 #42088]  INFO -- : Calling the index page
+I, [2014-09-05T14:29:49.068831 #42092]  INFO -- : Employee updated form loaded for employee with id 4
+I, [2014-09-05T14:29:55.201227 #42096]  INFO -- : Employee updated with id 4
+I, [2014-09-05T14:29:55.833526 #42100]  INFO -- : Calling the index page
+I, [2014-09-05T14:29:58.837978 #42104]  INFO -- : Calling the index page
+I, [2014-09-05T14:30:01.475489 #42108]  INFO -- : Calling the index page
+I, [2014-09-05T14:30:04.652313 #42119]  INFO -- : Calling the index page
+I, [2014-09-05T14:30:33.624920 #42125]  INFO -- : Calling the index page
+I, [2014-09-05T14:30:44.568376 #42130]  INFO -- : Calling the index page
+I, [2014-09-05T14:30:45.778152 #42134]  INFO -- : Calling the index page
+I, [2014-09-05T14:30:49.921966 #42138]  INFO -- : Calling the index page
+I, [2014-09-05T14:30:50.530930 #42141]  INFO -- : Calling the index page
+I, [2014-09-05T14:37:31.121101 #42260]  INFO -- : Calling the index page
+I, [2014-09-09T15:18:28.452353 #3492]  INFO -- : Calling the index page
+I, [2014-09-09T15:18:29.085212 #3495]  INFO -- : Calling the index page
+I, [2014-09-09T15:18:33.577416 #3503]  INFO -- : Calling the index page
+I, [2014-09-09T15:18:45.970743 #3524]  INFO -- : Calling the index page
+I, [2014-09-09T15:18:49.791876 #3528]  INFO -- : Calling the index page
+I, [2014-09-09T15:18:52.064597 #3532]  INFO -- : Calling the index page
+I, [2014-09-09T15:30:25.912373 #4102]  INFO -- : Calling the index page
+I, [2014-09-09T15:30:29.683930 #4106]  INFO -- : Calling the search page
+I, [2014-09-09T15:32:41.846255 #4127]  INFO -- : Calling the search page
+I, [2014-09-09T15:32:58.359801 #4135]  INFO -- : Calling the search page
+I, [2014-09-09T15:33:01.619051 #4142]  INFO -- : Calling the search page
+I, [2014-09-09T15:33:31.994137 #4148]  INFO -- : Calling the search page
+I, [2014-09-09T15:34:59.052030 #4161]  INFO -- : Calling the search page
+I, [2014-09-09T15:35:01.669217 #4170]  INFO -- : Calling the index page
+I, [2014-09-09T15:35:01.717437 #4174]  INFO -- : Calling the index page
+I, [2014-09-09T15:35:02.368084 #4177]  INFO -- : Calling the index page
+I, [2014-09-09T15:35:12.363094 #4186]  INFO -- : Calling the search page
+I, [2014-09-09T15:35:12.794119 #4190]  INFO -- : Calling the search page
+I, [2014-09-09T15:35:27.859717 #4194]  INFO -- : Calling the search page
+I, [2014-09-09T15:42:57.477480 #4313]  INFO -- : Calling the index page
+I, [2014-09-09T15:48:36.040467 #4619]  INFO -- : Calling the index page
+I, [2014-09-09T15:48:36.704635 #4622]  INFO -- : Calling the index page
+I, [2014-09-09T15:48:40.879329 #4626]  INFO -- : Calling the index page
+I, [2014-09-09T15:48:43.090698 #4630]  INFO -- : Calling the index page
+I, [2014-09-09T15:48:45.195560 #4634]  INFO -- : Employee updated form loaded for employee with id 1
+I, [2014-09-09T15:48:48.278416 #4638]  INFO -- : Employee updated with id 1
+I, [2014-09-09T15:48:49.154851 #4642]  INFO -- : Calling the index page
+I, [2014-09-09T15:49:03.602894 #4649]  INFO -- : Employee deleted with id 4
+I, [2014-09-09T15:49:06.554509 #4657]  INFO -- : Calling the index page
+I, [2014-09-09T15:49:09.473329 #4661]  INFO -- : Calling the index page
+I, [2014-09-09T15:49:11.884461 #4665]  INFO -- : Calling the index page
+I, [2014-09-09T15:49:18.223707 #4669]  INFO -- : Calling the index page
+I, [2014-09-09T15:49:21.967523 #4673]  INFO -- : Calling the index page
+I, [2014-09-09T15:49:48.863485 #4680]  INFO -- : Calling the index page
+I, [2014-09-09T15:49:50.817389 #4686]  INFO -- : Employee create form loaded
+I, [2014-09-09T15:50:03.818348 #4692]  INFO -- : New employee created with id 
+I, [2014-09-09T15:50:04.504724 #4696]  INFO -- : Calling the index page
+I, [2014-09-09T15:50:05.127964 #4699]  INFO -- : Calling the index page
+I, [2014-09-09T15:50:08.991231 #4703]  INFO -- : Calling the index page
+I, [2014-09-09T15:50:12.818312 #4707]  INFO -- : Calling the index page
+I, [2014-09-09T15:50:13.446675 #4711]  INFO -- : Calling the index page
+I, [2014-09-09T15:50:43.107864 #4717]  INFO -- : Calling the index page
+I, [2014-09-09T15:51:32.926891 #4726]  INFO -- : Calling the index page
+I, [2014-09-09T15:52:01.790762 #4733]  INFO -- : Calling the index page
+I, [2014-09-09T15:52:13.243163 #4741]  INFO -- : Test 1
+I, [2014-09-09T15:52:13.901458 #4745]  INFO -- : Calling the index page
+I, [2014-09-09T15:52:14.520258 #4748]  INFO -- : Calling the index page
+I, [2014-09-09T15:52:19.308581 #4752]  INFO -- : Calling the index page
+I, [2014-09-09T15:52:21.163457 #4756]  INFO -- : Calling the index page
+I, [2014-09-09T15:52:23.918103 #4760]  INFO -- : Employee updated form loaded for employee with id 7
+I, [2014-09-09T15:52:28.502339 #4764]  INFO -- : Employee updated with id 7
+I, [2014-09-09T15:52:29.140463 #4768]  INFO -- : Calling the index page
+I, [2014-09-09T15:52:41.732549 #4774]  INFO -- : Calling the index page
+I, [2014-09-09T15:52:44.483170 #4778]  INFO -- : Calling the index page
+I, [2014-09-10T11:56:39.562077 #9942]  INFO -- : Calling the index page
+I, [2014-09-10T11:56:40.696695 #9945]  INFO -- : Calling the index page

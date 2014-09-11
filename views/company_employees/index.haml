@@ -1,0 +1,25 @@
+%h1= @companies.name
+%table.table.table-bordered
+  .control-group
+    %a.btn.btn-primary{:href => "/companies/#{@companies.id}/employees/new"} Add Employee
+  %thead
+    %tr
+      %th Id
+      %th First Name
+      %th Last Name
+      %th Company Name
+      %th Created
+      %th Updated
+      %th Actions
+  %tbody
+    - @companies.employees.each do |employee|
+      %tr
+        %td= employee.id
+        %td= employee.firstname
+        %td= employee.lastname
+        %td= @companies.name
+        %td= pretty_date(employee.created_at)
+        %td= pretty_date(employee.updated_at)
+        %td
+          %a.btn.btn-primary{:href => "/employees/edit/#{employee[:id]}"} Edit
+          %a.btn.btn-danger{:href => "/employees/delete/#{employee[:id]}"} Delete

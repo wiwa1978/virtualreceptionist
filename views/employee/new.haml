@@ -1,0 +1,6 @@
+%h1 New Employee
+%form.form-inline{:action => "/employees", :method => "POST"}
+  %input#firstname.input-xlarge{:name => "firstname", :placeholder => "Employee first name", :type => "text"}/
+  %input#lastname.input-xlarge{:name => "lastname", :placeholder => "Employee last name", :type => "text"}/
+  %input#phone.input-xlarge{:name => "phone", :placeholder => "Employee phone number", :type => "text"}/
+  %button.btn.btn-primary{:type => "submit"} Add Employee

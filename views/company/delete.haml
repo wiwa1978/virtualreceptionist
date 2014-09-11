@@ -1,0 +1,9 @@
+%p Are you sure you want to delete:
+%blockquote
+  %p
+    = @company.name
+%form{:action => "/companies/delete/#{@company.id}", :method => "POST"}
+  %input{:name => "_method", :type => "hidden", :value => "delete"}/
+  %input.btn.btn-primary{:type => "submit", :value => "Delete"}/
+  or
+  %a{:href => "/"} Cancel
