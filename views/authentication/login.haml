@@ -1,17 +1,13 @@
 #sinatra_authentication
 
-  %h1.page_title Login
-  %form{:action => "/login", :method => "post"}
-    .field
-      .label
-        %label{:for => "user_email'"} Email
-      %input{:id => "user_email", :name => "email", :size => 30, :type => "text"}
-    .field
-      .label
-        %label{:for => "user_password"} Password
-      %input{:id => "user_password", :name => "password", :size => 30, :type => "password"}
-    .buttons
-      %input{:value => "Login", :type => "submit"}
-      %a{:href => "/signup", :class => 'sinatra_authentication_link'}
-        Sign up
-        
+.row
+  .span12
+    %form{ :action => "/login", :method => "post"}
+      %h1= 'Login'
+      %br
+      %input.form-input{:id => "user_email", :name => "email", :type => "text", :size => "20", :placeholder => "Email"}
+      %br
+      %input.form-input{:id => "user_password", :name => "password", :type => "password", :size => "20",:placeholder => "Password", :value => ""}
+      %br
+      %br
+      %input.btn.btn-primary{ :name => "submit", :type => "submit", :value => "Login"}

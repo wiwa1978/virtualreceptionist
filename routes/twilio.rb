@@ -2,6 +2,9 @@ require 'rubygems'
 require 'sinatra'
 require 'twilio-ruby'
  
+
+
+ 
 default_client = "virtualreceptionist"
  
 get '/client' do
@@ -42,26 +45,6 @@ post '/voice' do
     response.text
 end
 
-post '/sms' do
-    account_sid = ENV['TWILIO_ACCOUNT_SID']
-    auth_token = ENV['TWILIO_AUTH_TOKEN']
-    
-    client = Twilio::REST::Client.new account_sid, auth_token
-     
-    from = "+14159998888" # Your Twilio number
-     
-    friends = {
-    "+32473267865" => "Wimpie",
 
-    }
-    friends.each do |key, value|
-      client.account.messages.create(
-        :from => from,
-        :to => key,
-        :body => "Hey #{value}, this is working!"
-      ) 
-      puts "Sent message to #{value}"
-    end
-end
 
 

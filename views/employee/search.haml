@@ -1,0 +1,5 @@
+%h1 Search your Contact
+%form.form-inline{:action => "/employees/search", :method => "POST"}
+  %input#query.input-xlarge{:name => "query", :placeholder => "Provide first or last name of your contact", :type => "text"}/
+  .control-group
+  %button.btn.btn-primary{:type => "submit"} Search Employee

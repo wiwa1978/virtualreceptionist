@@ -1,0 +1,17 @@
+%table.table.table-bordered
+  %thead
+    %tr
+      %th Id
+      %th First Name
+      %th Last Name
+      %th Actions
+  %tbody
+    - @results.each do |result|
+      %tr
+        %td= result.id
+        %td= result.firstname
+        %td= result.lastname
+        %td
+          %form#enter_number{:action => "/message", :method => "POST"}
+            %input#phone_number{:name => "phone_number", :type => "hidden", :value => result.phone}/
+            %button.btn.btn-primary{:type => "submit"} Contact
