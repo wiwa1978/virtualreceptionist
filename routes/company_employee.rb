@@ -15,14 +15,15 @@
 
   post "/companies/:id/employees/?" do
     login_required  
+    
     employee = Employee.new(:company_id => params[:company_id], :firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone], :created_at => Time.now,:updated_at => Time.now)
     logger.info "Test " + params[:company_id].to_s
     if employee.save
       flash[:notice] = "Employee saved successfully."
-      redirect '/companies/:id/employees'
+      redirect '/companies'
     else 
       flash[:error] = "Employee could not be saved."
-      redirect '/companies/:id/employees'
+      redirect '/companies'
     end
   end
   
