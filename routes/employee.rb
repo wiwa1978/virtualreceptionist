@@ -17,7 +17,6 @@
   end
 
   post "/employees/search"  do
-    #@results = Employee.all(:lastname.ilike => "%#{params[:query]}%") | Employee.all(:firstname.ilike => "%#{params[:query]}%")
-    @results = Employee.find(:conditions => ["lower(lastname) = ?", params[:query].downcase ]) 
+    @results = Employee.all(:lastname.like => "%#{params[:query]}%") | Employee.all(:firstname.like => "%#{params[:query]}%")
     haml :"employee/results"
   end
