@@ -1,10 +1,10 @@
   get "/?" do
-    logger.info "Calling the index page"
+    #logger.info "Calling the index page"
     redirect "/employees"
   end
 
   get "/employees/?" do
-    login_required  
+    #login_required  
     logger.info "Calling the index page"
     #@employees = Employee.all(:order => :created_at.desc)
     @companies = Company.all
@@ -12,14 +12,14 @@
   end
 
   get "/employees/new/?" do
-    login_required  
+    #login_required  
     logger.info "Employee create form loaded"
     @title = "New Employee"
     haml :"/employee/new"
   end
 
   post "/employees/?" do
-    login_required  
+    #login_required  
     employee = Employee.new(:firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone], :created_at => Time.now,:updated_at => Time.now)
     logger.info "New employee created with id " + params[:id].to_s
     if employee.save
@@ -32,7 +32,7 @@
   end
    
   get "/employees/:id/?" do
-    login_required  
+    #login_required  
     @employee = Employee.get(params[:id])
     logger.info "Employee information for employee with id " + params[:id].to_s
     @title = "Employee Info"
@@ -40,7 +40,7 @@
   end
    
   get "/employees/edit/:id/?" do
-    login_required  
+    #login_required  
     @employee = Employee.get(params[:id])
     logger.info "Employee updated form loaded for employee with id " + params[:id].to_s 
     @title = "Edit Employee Info"
@@ -48,7 +48,7 @@
   end
    
   put "/employees/:id/?" do
-    login_required  
+    #login_required  
     employee = Employee.get(params[:id])
     logger.info "Employee updated with id " + params[:id].to_s
     employee.update(:firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone])
@@ -56,7 +56,7 @@
   end
    
   get '/employees/delete/:id/?' do
-    login_required  
+    #login_required  
     @employee = Employee.get(params[:id])
     logger.info "Employee deleted with id " + params[:id].to_s
     haml :"employee/delete"
@@ -64,7 +64,7 @@
 
 
   delete '/employees/delete/:id/?' do
-    login_required  
+    #login_required  
     Employee.get(params[:id]).destroy
     redirect '/employees'  
   end
