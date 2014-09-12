@@ -41,3 +41,25 @@ post '/voice' do
     end
     response.text
 end
+
+post '/sms' do
+
+    client = Twilio::REST::Client.new account_sid, auth_token
+     
+    from = "+14159998888" # Your Twilio number
+     
+    friends = {
+    "+32473267865" => "Wimpie",
+
+    }
+    friends.each do |key, value|
+      client.account.messages.create(
+        :from => from,
+        :to => key,
+        :body => "Hey #{value}, this is working!"
+      ) 
+      puts "Sent message to #{value}"
+    end
+end
+
+
