@@ -19,7 +19,7 @@
     logger.info "Test " + params[:company_id].to_s
     if employee.save
       flash[:notice] = "Employee saved successfully."
-      redirect '/'
+      redirect '/companies/:id/employees'
     else 
       flash[:error] = "Employee could not be saved."
       redirect '/companies/:id/employees'
