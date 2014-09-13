@@ -1,7 +1,8 @@
 %h1= @companies.name
 %table.table.table-bordered
+  %hr
   %a.btn.btn-primary{:href => "/companies/#{@companies.id}/employees/new"} Add Employee
-
+  %hr
   %thead
     %tr
       %th Id

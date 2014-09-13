@@ -320,3 +320,31 @@ I, [2014-09-13T13:08:08.031859 #23327]  INFO -- : Calling the index page
 I, [2014-09-13T13:08:10.066963 #23331]  INFO -- : Calling the index page
 I, [2014-09-13T13:08:11.454819 #23335]  INFO -- : Calling the index page
 I, [2014-09-13T13:08:12.977389 #23339]  INFO -- : Company updated form loaded for company with id 1
+I, [2014-09-13T13:18:43.628609 #23876]  INFO -- : Calling the index page
+I, [2014-09-13T13:19:21.577344 #23884]  INFO -- : Calling the index page
+I, [2014-09-13T13:19:46.192341 #23917]  INFO -- : Calling the index page
+I, [2014-09-13T13:19:59.385603 #23937]  INFO -- : Calling the index page
+I, [2014-09-13T13:20:03.401298 #23946]  INFO -- : Calling the index page
+I, [2014-09-13T13:20:05.079734 #23950]  INFO -- : Calling the index page
+I, [2014-09-13T13:20:06.639932 #23954]  INFO -- : Calling the index page
+I, [2014-09-13T13:20:19.705214 #23980]  INFO -- : Calling the index page
+I, [2014-09-13T13:20:29.942999 #24000]  INFO -- : Calling the index page
+I, [2014-09-13T13:20:33.210076 #24005]  INFO -- : Company create form loaded
+I, [2014-09-13T13:20:50.653653 #24034]  INFO -- : Company create form loaded
+I, [2014-09-13T13:21:00.969388 #24039]  INFO -- : Calling the index page
+I, [2014-09-13T13:21:06.239466 #24043]  INFO -- : Company updated form loaded for company with id 1
+I, [2014-09-13T13:21:26.490232 #24067]  INFO -- : Company updated form loaded for company with id 1
+I, [2014-09-13T13:21:32.471762 #24089]  INFO -- : Company updated form loaded for company with id 1
+I, [2014-09-13T13:21:40.050908 #24105]  INFO -- : Company updated form loaded for company with id 1
+I, [2014-09-13T13:21:43.787995 #24109]  INFO -- : Company updated with id 1
+I, [2014-09-13T13:21:44.320215 #24113]  INFO -- : Calling the index page
+I, [2014-09-13T13:21:46.640082 #24117]  INFO -- : Calling the index page
+I, [2014-09-13T13:21:53.459523 #24121]  INFO -- : Calling the index page
+I, [2014-09-13T13:21:56.054634 #24125]  INFO -- : Company updated form loaded for company with id 1
+I, [2014-09-13T13:21:58.565972 #24129]  INFO -- : Company updated with id 1
+I, [2014-09-13T13:21:59.112981 #24133]  INFO -- : Calling the index page
+I, [2014-09-13T13:22:01.293042 #24138]  INFO -- : Calling the index page
+I, [2014-09-13T13:23:39.078173 #24221]  INFO -- : Calling the index page
+I, [2014-09-13T13:24:31.210514 #24236]  INFO -- : Calling the index page
+I, [2014-09-13T13:24:34.675591 #24240]  INFO -- : Calling the index page
+I, [2014-09-13T13:24:37.008607 #24244]  INFO -- : Calling the index page
