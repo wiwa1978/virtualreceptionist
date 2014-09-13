@@ -1,17 +1,17 @@
-%table.table.table-bordered
-  %thead
-    %tr
-      %th Id
-      %th First Name
-      %th Last Name
-      %th Actions
-  %tbody
-    - @results.each do |result|
-      %tr
-        %td= result.id
-        %td= result.firstname
-        %td= result.lastname
-        %td
-          %form#enter_number{:action => "/message", :method => "POST"}
-            %input#phone_number{:name => "phone_number", :type => "hidden", :value => result.phone}/
-            %input.btn.btn-primary{:type => "submit", :value => "Contact"}/
+
+.row
+  .span12
+    .ul.thumbnails
+      - @results.each do |result|
+        %li.span5.clearfix
+          .thumbnail.clearfix
+            %img.pull-left.span2.clearfix{:alt => "ALT NAME", :src => "http://placehold.it/100x100", :style => "margin-right:10px"}/
+            .caption
+              %form#enter_number{:action => "/message", :method => "POST"}
+                %input#phone_number{:name => "phone_number", :type => "hidden", :value => result.phone}/
+                %input.btn.btn-primary.icon.pull-right{:type => "submit", :value => "Contact"}/
+              %h4
+                #{result[:lastname]} #{result[:firstname]}
+              %small
+                %b> Title:
+%a.btn.btn-primary.icon.pull-right{:href => "/employees/search"} Go back to search
