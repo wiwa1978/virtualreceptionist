@@ -1,7 +1,8 @@
-
+%h1 Contact persons found
 .row
   .span12
     .ul.thumbnails
+      %hr.colorgraph/
       - @results.each do |result|
         %li.span5.clearfix
           .thumbnail.clearfix
@@ -14,4 +15,5 @@
                 #{result[:lastname]} #{result[:firstname]}
               %small
                 %b> Title:
-%a.btn.btn-primary.icon.pull-right{:href => "/employees/search"} Go back to search
+      %hr.colorgraph/
+%a.btn.btn-primary.icon.pull-right{:href => "/employees/search"} New search
