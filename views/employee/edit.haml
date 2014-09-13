@@ -1,8 +1,8 @@
 %h1 Edit Employee
-%form{:action => "/employees/#{@employee.id}", :method => "post"}
+%form.form-inline{:action => "/employees/#{@employee.id}", :method => "post"}
   %input{:name => "_method", :type => "hidden", :value => "put"}/
-  %input#firstname.input-xlarge{:name => "firstname", :placeholder => "Employee first name", :type => "text", :value => @employee.firstname}/
-  %input#lastname.input-xlarge{:name => "lastname", :placeholder => "Employee last name", :type => "text", :value => @employee.lastname}/
-  %input#phone.input-xlarge{:name => "phone", :placeholder => "Employee phone number", :type => "text", :value => @employee.phone}/
+  %input#firstname.form-control{:name => "firstname", :placeholder => "Employee first name", :type => "text", :value => @employee.firstname}/
+  %input#lastname.form-control{:name => "lastname", :placeholder => "Employee last name", :type => "text", :value => @employee.lastname}/
+  %input#phone.form-control{:name => "phone", :placeholder => "Employee phone number", :type => "text", :value => @employee.phone}/
   %input.btn.btn-primary{:type => "submit", :value => "Edit Employee"}/
 %td

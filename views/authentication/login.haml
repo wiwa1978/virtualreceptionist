@@ -1,13 +1,18 @@
 #sinatra_authentication
 
-.row
-  .span12
-    %form{ :action => "/login", :method => "post"}
-      %h1= 'Login'
-      %br
-      %input.form-input{:id => "user_email", :name => "email", :type => "text", :size => "20", :placeholder => "Email"}
-      %br
-      %input.form-input{:id => "user_password", :name => "password", :type => "password", :size => "20",:placeholder => "Password", :value => ""}
-      %br
-      %br
-      %input.btn.btn-primary{ :name => "submit", :type => "submit", :value => "Login"}
+.row{:style => "margin-top:20px"}
+  .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
+    %form{:role => "form", :action => "/login", :method => "post"}
+      %fieldset
+        %h2 Log in
+        %hr.colorgraph/
+        .form-group
+          %input#email.form-control.input-lg{:name => "email", :placeholder => "Email Address", :type => "email"}/
+        .form-group
+          %input#password.form-control.input-lg{:name => "password", :placeholder => "Password", :type => "password"}/
+        
+        %hr.colorgraph/
+        .row
+          .col-xs-6.col-sm-6.col-md-6
+            %input.btn.btn-lg.btn-success.btn-block{:type => "submit", :value => "Sign In"}/
+       

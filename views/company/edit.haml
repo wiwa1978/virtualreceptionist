@@ -1,6 +1,9 @@
 %h1 Edit Company
-%form{:action => "/companies/#{@company.id}", :method => "post"}
+%form.form-inline{:action => "/companies/#{@company.id}", :method => "post"}
   %input{:name => "_method", :type => "hidden", :value => "put"}/
-  %input#firstname.input-xlarge{:name => "name", :placeholder => "Company name", :type => "text", :value => @company.name}/ 
+  %input#firstname.form-control{:name => "name", :placeholder => "Company name", :type => "text", :value => @company.name}/ 
+
   %input.btn.btn-primary{:type => "submit", :value => "Edit Company"}/
 %td
+
+

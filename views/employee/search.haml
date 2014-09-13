@@ -1,5 +1,10 @@
-%h1 Search your Contact
-%form.form-inline{:action => "/employees/search", :method => "POST"}
-  %input#query.input-xlarge{:name => "query", :placeholder => "Provide first or last name of your contact", :type => "text"}/
-  .control-group
-  %button.btn.btn-primary{:type => "submit"} Search Employee
+.row
+  .col-md-6.col-md-offset-3
+    %hgroup
+      %h1.free Search your contact person
+    .well
+      %form{:action => "/employees/search", :method => "POST"}
+        .input-group
+          %input#query.btn.btn-large{:name => "query", :placeholder => "Name of contact person", :required => ""}/
+          %button.btn.btn-info.btn-lg{:type => "submit"} Search
+

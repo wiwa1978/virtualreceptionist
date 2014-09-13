@@ -1,8 +1,8 @@
 %h1 New Employee
 %form.form-inline{:action => "/companies/#{@id}/employees", :method => "POST"}
   %input#company_id{:name => "company_id", :type => "hidden", :value => @id}/
-  %input#firstname.input-xlarge{:name => "firstname", :placeholder => "Employee first name", :type => "text"}/
-  %input#lastname.input-xlarge{:name => "lastname", :placeholder => "Employee last name", :type => "text"}/
-  %input#phone.input-xlarge{:name => "phone", :placeholder => "Employee phone number", :type => "text"}/
-  .control-group
-  %button.btn.btn-primary{:type => "submit"} Add Employee
+  %input#firstname.form-control{:name => "firstname", :placeholder => "Employee first name", :type => "text"}/
+  %input#lastname.form-control{:name => "lastname", :placeholder => "Employee last name", :type => "text"}/
+  %input#phone.form-control{:name => "phone", :placeholder => "Employee phone number", :type => "text"}/
+
+  %input.btn.btn-primary{:type => "submit", :value => "Add Employee"}/
