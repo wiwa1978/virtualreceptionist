@@ -316,3 +316,7 @@ I, [2014-09-13T01:52:01.064398 #20643]  INFO -- : Calling the index page
 I, [2014-09-13T02:16:07.170831 #21501]  INFO -- : Calling the index page
 I, [2014-09-13T02:16:09.460195 #21505]  INFO -- : Employee updated form loaded for employee with id 2
 I, [2014-09-13T02:16:11.420945 #21509]  INFO -- : Calling the index page
+I, [2014-09-13T13:08:08.031859 #23327]  INFO -- : Calling the index page
+I, [2014-09-13T13:08:10.066963 #23331]  INFO -- : Calling the index page
+I, [2014-09-13T13:08:11.454819 #23335]  INFO -- : Calling the index page
+I, [2014-09-13T13:08:12.977389 #23339]  INFO -- : Company updated form loaded for company with id 1

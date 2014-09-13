@@ -15,33 +15,31 @@
         padding: 15px 0;
       }
   %body
-    .container
-      .navbar.navbar-default{:role => "navigation"}
-        .container-fluid
-          .navbar-header
-            %button.navbar-toggle.collapsed{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-              %span.sr-only Toggle navigation
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-            %a.navbar-brand{:href => "#"} Virtual Receptionist
-          
-          .navbar-collapse.collapse
-            - if logged_in?
+    - if logged_in?
+      .container
+        .navbar.navbar-default{:role => "navigation"}
+          .container-fluid
+            .navbar-header
+              %button.navbar-toggle.collapsed{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+                %span.sr-only Toggle navigation
+                %span.icon-bar
+                %span.icon-bar
+                %span.icon-bar
+              %a.navbar-brand{:href => "#"} Virtual Receptionist
+            
+            .navbar-collapse.collapse
+              
               %ul.nav.navbar-nav
                 %li
                   %a{:href => "/companies"} Companies
                 %li
                   %a{:href => "/employees"} Employees
-            
-            
+              
+              
               %ul.nav.navbar-nav.navbar-right
                 %li
                   %a{:href => "/logout"} Logout
-            - else
-              %ul.nav.navbar-nav.navbar-right
-                %li
-                  %a{:href => "/login"} Login
+              
           
     .container
       - flash.each do |key, value|
