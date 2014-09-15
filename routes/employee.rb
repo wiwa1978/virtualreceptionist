@@ -6,10 +6,14 @@
 
   get "/employees/?" do
     login_required  
-    logger.info "Calling the index page"
-    #@employees = Employee.all(:order => :created_at.desc)
-    @companies = Company.all
-    haml :"employee/index"
+    if current_user.site_admin? | current_user.admin?
+      logger.info "Calling the index page"
+      #@employees = Employee.all(:order => :created_at.desc)
+      @companies = Company.all
+      haml :"employee/index"
+    else
+      haml :"error_404"
+    end
   end
 
   get "/employees/search/?"  do
@@ -21,31 +25,47 @@
     haml :"employee/results"
   end
 
-  get "/employees/edit/:id/?" do
-    login_required  
-    @employee = Employee.get(params[:id])
-    logger.info "Employee updated form loaded for employee with id " + params[:id].to_s 
-    @title = "Edit Employee Info"
-    haml :"employee/edit"
+  get "/employees/:id/edit/?" do
+    login_required 
+    if current_user.site_admin? | current_user.admin?
+      @employee = Employee.get(params[:id])
+      logger.info "Employee updated form loaded for employee with id " + params[:id].to_s 
+      @title = "Edit Employee Info"
+      haml :"employee/edit"
+    else
+      haml :"error_404"
+    end
   end
    
   put "/employees/:id/?" do
-    login_required  
-    employee = Employee.get(params[:id])
-    logger.info "Employee updated with id " + params[:id].to_s
-    employee.update(:firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone])
-    redirect "/employees"
+    login_required
+    if current_user.site_admin? | current_user.admin?
+      employee = Employee.get(params[:id])
+      logger.info "Employee updated with id " + params[:id].to_s
+      employee.update(:firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone])
+      redirect "/employees"
+    else
+      haml :"error_404"
+    end
   end
    
-  get '/employees/delete/:id/?' do
-    login_required  
-    @employee = Employee.get(params[:id])
-    logger.info "Employee deleted with id " + params[:id].to_s
-    haml :"employee/delete"
+  get '/employees/:id/delete/?' do
+    login_required
+    if current_user.site_admin? | current_user.admin?
+      @employee = Employee.get(params[:id])
+      logger.info "Employee deleted with id " + params[:id].to_s
+      haml :"employee/delete"
+    else
+      haml :"error_404"
+    end
   end
 
-  delete '/employees/delete/:id/?' do
-    login_required  
-    Employee.get(params[:id]).destroy
-    redirect '/employees'  
+  delete '/employees/:id/delete/?' do
+    if current_user.site_admin? | current_user.admin?
+      login_required  
+      Employee.get(params[:id]).destroy
+      redirect '/employees' 
+    else
+      haml :"error_404"
+    end 
   end

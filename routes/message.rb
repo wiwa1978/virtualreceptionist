@@ -20,7 +20,7 @@ end
 
 
 post '/message' do
-    #login_required
+    login_required
     @phone_number = params[:phone_number]
 
     @client.account.sms.messages.create(

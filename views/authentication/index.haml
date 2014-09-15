@@ -23,7 +23,38 @@
             %a{:href => "/users/#{user.id}/edit"} edit
           %td
             -# this doesn't work for tk
-            - if !user.site_admin?
+            - if !user.site_admin? 
               %a{:href => "/users/#{user.id}/delete", :onclick => "return confirm('you sure?')"} delete
             - else
               site admin
+
+
+%table.table.table-bordered
+  %hr
+  %a.btn.btn-primary{:href => "/signup"} Add User
+  %hr
+  %thead
+    %tr
+      %th Email
+      %th Permission
+      - if current_user.site_admin?
+        %th Actions
+  %tbody
+    - @users.each do |user| 
+      %tr
+        %td= user.email
+        %td 
+          - if user.site_admin?
+            Site Administrator
+          - elsif user.admin?
+            Administrator
+          - else
+            Autenticated (read-only)
+            
+        - if current_user.site_admin?
+          %td 
+            
+            %a.btn.btn-primary{:href => "/users/#{user.id}/edit"} Edit
+            - if !user.site_admin?
+              %a.btn.btn-danger{:href => "/users/#{user.id}/delete"} Delete
+

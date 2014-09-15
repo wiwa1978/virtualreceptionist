@@ -39,3 +39,31 @@
         - unless @user.fb_uid
           |
           = render_facebook_connect_link('Link account with Facebook')
+
+
+%h1
+  Edit
+  - if @user.email
+    = @user.email
+  - else
+    account
+  - if current_user.admin?
+    YES
+  - else
+    NO
+  %hr.colorgraph/
+  %form.form-inline{:action => "/users/#{@user.id}/edit", :method => "post"}
+    %input#user_email.form-control{:name => "user[email]", :placeholder => "Email", :type => "text", :value => @user.email}/ 
+    %br
+    %input#user_password.form-control{:name => "user[password]", :placeholder => "Password", :type => "password"}/ 
+    %br
+    %input#user_password_confirmation.form-control{:name => "user[password_confirmation]", :placeholder => "Confirm Password", :type => "password"}/ 
+    %br
+    - if current_user.admin? && current_user.id != @user.id
+      %select.form-control{ :id => "permission_level", :name => "user[permission_level]" }
+        %option{:value => -1, :selected => @user.admin?} Admin
+        %option{:value => 1, :selected => @user.permission_level == 1} Authenticated User
+    %br
+     
+
+    %input.btn.btn-primary{:type => "submit", :value => "Edit Company"}/

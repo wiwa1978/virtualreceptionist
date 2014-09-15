@@ -7,7 +7,6 @@ require 'sinatra/flash'
 require 'sinatra-authentication'
 require 'digest/sha1'
 require 'haml'
-
 require 'rack-flash'
 
 use Rack::Flash
@@ -27,6 +26,7 @@ configure :production do
     ENV['HEROKU_POSTGRESQL_NAVY_URL']
   )
 end
+
 
 require './models/init'
 require './helpers/init'

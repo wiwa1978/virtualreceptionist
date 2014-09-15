@@ -28,7 +28,6 @@
               %a.navbar-brand{:href => "#"} Virtual Receptionist
             
             .navbar-collapse.collapse
-              
               %ul.nav.navbar-nav
                 %li
                   %a{:href => "/companies"} Companies
@@ -38,7 +37,7 @@
               
               %ul.nav.navbar-nav.navbar-right
                 %li
-                  %a{:href => "/logout"} Logout
+                  %a{:href => "/logout"} Logout #{current_user.email}
               
           
     .container
