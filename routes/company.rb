@@ -6,6 +6,7 @@
   end
 
   get "/companies/logo?" do
+      @companies = Company.all(:order => :name)
       haml :"company/logo"
   end
 
