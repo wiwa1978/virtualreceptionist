@@ -1,5 +1,45 @@
-%h1 New Company
+%h3 New Company
 %hr
-%form.form-inline{:action => "/companies", :method => "POST"}
-  %input#firstname.form-control{:name => "name", :placeholder => "Company name", :type => "text"}/
-  %input.btn.btn-primary{:type => "submit", :value => "Add Company"}/
+  .stepwizard
+    .stepwizard-row.setup-panel
+      .stepwizard-step
+        %a.btn.btn-primary.btn-circle{:href => "#step-1", :type => "button"} 1
+        %p Information
+      .stepwizard-step
+        %a.btn.btn-default.btn-circle{:disabled => "disabled", :href => "#step-2", :type => "button"} 2
+        %p Logo
+      .stepwizard-step
+        %a.btn.btn-default.btn-circle{:disabled => "disabled", :href => "#step-3", :type => "button"} 3
+        %p Submit
+  
+  %form.form-inline{:role => "form", :action => "/companies", :method => "POST", :enctype=>"multipart/form-data"}
+    #step-1.row.setup-content
+      .col-xs-12
+        .col-md-12
+          %h3 Provide Information
+          .form-group
+            %input#companyname.form-control{:name => "name", :placeholder => "Company name", :type => "text", :required => "required"}/
+           
+          %button.btn.btn-primary.nextBtn.btn-lg.pull-right{:type => "button"} Next
+    #step-2.row.setup-content
+      .col-xs-12
+        .col-md-12
+          %h3 Step 2
+          .form-group
+            %input.filestyle{"data-buttonname" => "btn-primary", :type => "file", :name => "file"}/
+          %button.btn.btn-primary.nextBtn.btn-lg.pull-right{:type => "button"} Next
+    #step-3.row.setup-content
+      .col-xs-12
+        .col-md-12
+          %h3 Step 3
+          %button.btn.btn-success.btn-lg.pull-right{:type => "submit"} Finish!
+
+
+
+
+
+
+
+
+
+

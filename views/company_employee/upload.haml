@@ -1,0 +1,6 @@
+%h2 Upload
+%form.form-inline{:action=>"/companies/#{@id}/employees/upload",:method=>"post",:enctype=>"multipart/form-data"}
+	%input.filestyle{"data-buttonname" => "btn-primary", :type => "file", :name => "file"}/
+	%br
+	%input.btn.btn-primary{:type=>"submit",:value=>"Upload"}
+

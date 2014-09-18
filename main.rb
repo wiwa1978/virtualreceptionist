@@ -8,6 +8,7 @@ require 'sinatra-authentication'
 require 'digest/sha1'
 require 'haml'
 require 'rack-flash'
+require 'csv'
 
 use Rack::Flash
 enable :sessions

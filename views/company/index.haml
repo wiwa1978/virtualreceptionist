@@ -1,3 +1,4 @@
+%h3 All companies
 %table.table.table-bordered
   %hr
   %a.btn.btn-primary{:href => "/companies/new"} Add Company
@@ -6,6 +7,7 @@
     %tr
       %th Id
       %th Name
+      %th Logo
       %th Created
       %th Updated
       %th Actions
@@ -14,6 +16,7 @@
       %tr
         %td= company[:id]
         %td= company[:name]
+        %td= company[:logo]
         %td= pretty_date(company[:created_at])
         %td= pretty_date(company[:updated_at])
         %td

@@ -1,4 +1,4 @@
-%h1 Edit Employee
+%h3 Edit Employee
 %form.form-inline{:action => "/employees/#{@employee.id}", :method => "post"}
   %input{:name => "_method", :type => "hidden", :value => "put"}/
   %input#firstname.form-control{:name => "firstname", :placeholder => "Employee first name", :type => "text", :value => @employee.firstname}/

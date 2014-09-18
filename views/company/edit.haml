@@ -1,4 +1,4 @@
-%h1 Edit Company: #{@company.name}
+%h3 Edit Company #{@company.name}
 %form.form-inline{:action => "/companies/#{@company.id}", :method => "post"}
   %input{:name => "_method", :type => "hidden", :value => "put"}/
   %input#firstname.form-control{:name => "name", :placeholder => "Company name", :type => "text", :value => @company.name}/ 

@@ -2,9 +2,6 @@ require 'rubygems'
 require 'sinatra'
 require 'twilio-ruby'
  
-
-
- 
 default_client = "virtualreceptionist"
  
 get '/client' do

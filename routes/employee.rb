@@ -1,7 +1,5 @@
-  get "/?" do
-    #login_required
-    #logger.info "Calling the index page"
-    redirect "/employees/search"
+  get "/employees/search/?"  do
+    haml :"employee/search"
   end
 
   get "/employees/?" do
@@ -14,10 +12,6 @@
     else
       haml :"error_404"
     end
-  end
-
-  get "/employees/search/?"  do
-    haml :"employee/search"
   end
 
   post "/employees/search"  do
@@ -61,11 +55,15 @@
   end
 
   delete '/employees/:id/delete/?' do
-    if current_user.site_admin? | current_user.admin?
-      login_required  
+    login_required 
+    if current_user.site_admin? | current_user.admin? 
       Employee.get(params[:id]).destroy
       redirect '/employees' 
     else
       haml :"error_404"
     end 
   end
+
+
+    
+ 

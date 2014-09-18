@@ -1,3 +1,14 @@
+  get "/?" do
+    #login_required
+    #logger.info "Calling the index page"
+    #redirect "/employees/search"
+    redirect "/companies/logo"
+  end
+
+  get "/companies/logo?" do
+      haml :"company/logo"
+  end
+
   get "/companies/?" do
     login_required
     if current_user.site_admin? | current_user.admin?
@@ -9,7 +20,6 @@
     end
   end
 
-   
   get "/companies/new/?" do
     login_required
     if current_user.site_admin? | current_user.admin?
@@ -21,10 +31,23 @@
     end
   end
 
-  post "/companies/?" do
+  get "/public/uploads/:name?" do
     login_required
     if current_user.site_admin? | current_user.admin?
-      company = Company.new(:name => params[:name], :created_at => Time.now,:updated_at => Time.now)
+      haml :"/company/new"
+    else
+       haml :"error_404"
+    end
+  end
+
+  post "/companies/?" do
+    login_required
+    File.open('public/uploads/' + params[:file][:filename], "w") do |f|
+      f.write(params[:file][:tempfile].read)
+    end
+    
+    if current_user.site_admin? | current_user.admin?
+      company = Company.new(:name => params[:name], :logo => params[:file][:filename],:created_at => Time.now,:updated_at => Time.now)
       logger.info "New company created with id " + params[:id].to_s
       if company.save
         flash[:notice] = "Company saved successfully."
@@ -74,7 +97,7 @@
     end
   end
    
-  get '/companies/delete/:id/?' do
+  get '/companies/:id/delete/?' do
     login_required  
     if current_user.site_admin? | current_user.admin? 
       @employee = Company.get(params[:id])
@@ -85,7 +108,7 @@
     end
   end
 
-  delete '/companies/delete/:id/?' do
+  delete '/companies/:id/delete/?' do
     login_required  
     if current_user.site_admin? | current_user.admin?
       Company.get(params[:id]).destroy
@@ -95,4 +118,20 @@
     end
   end
 
+  post '/companies/:id/upload' do
+    unless params[:file] && (tmpfile = params[:file][:tempfile]) && (name = params[:file][:filename])
+      return haml(:"employee/upload")
+    end
+    File.open('public/uploads/' + params[:file][:filename], "w") do |f|
+      f.write(params[:file][:tempfile].read)
+    end
+    
+    CSV.foreach('public/uploads/' + params[:file][:filename].to_s, :headers => true) do |csv_obj|
+      employee = Employee.new(:company_id => 1, :firstname => csv_obj['firstname'], :lastname => csv_obj['lastname'], :phone => csv_obj['phone'], :created_at => Time.now,:updated_at => Time.now)
+      employee.save
+    end
+
+    flash[:success] = "Employees inserted successfully"
+    redirect '/'
+  end
  
