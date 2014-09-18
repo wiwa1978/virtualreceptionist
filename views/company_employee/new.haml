@@ -1,4 +1,4 @@
-%h3 New Employee
+%h3 New Employee for #{@company.name}
 %form.form-inline{:action => "/companies/#{@id}/employees", :method => "POST"}
   %input#company_id{:name => "company_id", :type => "hidden", :value => @id}/
   %input#firstname.form-control{:name => "firstname", :placeholder => "Employee first name", :type => "text"}/

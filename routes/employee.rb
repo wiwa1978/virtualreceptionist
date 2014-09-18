@@ -1,7 +1,3 @@
-  #get "/employees/search/?"  do
-  #  haml :"employee/search"
-  #end
-
   get "/employees/?" do
     login_required  
     if current_user.site_admin? | current_user.admin?
@@ -13,6 +9,11 @@
       haml :"error_404"
     end
   end
+
+  #get "/employees/search/?"  do
+  #  haml :"employee/search"
+  #end
+
 
   # post "/employees/search"  do
   #  @results = Employee.all(:lastname.like => "%#{params[:query]}%") | Employee.all(:firstname.like => "%#{params[:query]}%")

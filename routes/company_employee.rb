@@ -19,6 +19,7 @@
     if current_user.site_admin? | current_user.admin?
       @title = "New Company"
       @id = params[:id]
+      @company = Company.get(params[:id])
       haml :"/company_employee/new"
     else
       haml :"error_404"
@@ -44,6 +45,7 @@
   get '/companies/:id/employees/upload' do
     login_required 
     @id = params[:id]
+    @company = Company.get(params[:id])
     haml :"company_employee/upload"
   end
 

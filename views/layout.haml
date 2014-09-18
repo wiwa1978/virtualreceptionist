@@ -37,7 +37,7 @@
                 %li
                   %a{:href => "/employees"} Employees
               
-              - if current_user.exists?
+              - if current_user != nil
                 %ul.nav.navbar-nav.navbar-right
                   %li
                     %a{:href => "/logout"} Logout #{current_user.email}

@@ -121,7 +121,7 @@
 
   post '/companies/:id/upload' do
     unless params[:file] && (tmpfile = params[:file][:tempfile]) && (name = params[:file][:filename])
-      return haml(:"employee/upload")
+      return haml(:"company/upload")
     end
     File.open('public/uploads/' + params[:file][:filename], "w") do |f|
       f.write(params[:file][:tempfile].read)
