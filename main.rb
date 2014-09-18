@@ -13,15 +13,18 @@ require 'csv'
 use Rack::Flash
 enable :sessions
 
+
 use Rack::Session::Cookie, :secret => 'S3cr3t'
 set :sinatra_authentication_view_path, Pathname(__FILE__).dirname.expand_path + "views/authentication"
 
 configure :development do
+
   DataMapper::Logger.new($stdout, :debug)
   DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/employees.db")
 end
 
 configure :production do
+
   DataMapper.setup(
     :default,
     ENV['HEROKU_POSTGRESQL_NAVY_URL']

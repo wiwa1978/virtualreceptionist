@@ -1,3 +1,8 @@
+  get "/companies/:id/employees/results?" do
+    @results = Company.get(params[:id])
+    haml :"company_employee/results"
+  end
+
   get "/companies/:id/employees/?" do
     login_required  
     if current_user.site_admin? | current_user.admin?
@@ -37,11 +42,13 @@
   end
 
   get '/companies/:id/employees/upload' do
+    login_required 
     @id = params[:id]
     haml :"company_employee/upload"
   end
 
   post '/companies/:id/employees/upload' do
+    login_required 
     unless params[:file] && (tmpfile = params[:file][:tempfile]) && (name = params[:file][:filename])
       return haml(:"employee/upload")
     end

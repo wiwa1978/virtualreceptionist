@@ -1,6 +1,6 @@
-  get "/employees/search/?"  do
-    haml :"employee/search"
-  end
+  #get "/employees/search/?"  do
+  #  haml :"employee/search"
+  #end
 
   get "/employees/?" do
     login_required  
@@ -14,10 +14,10 @@
     end
   end
 
-  post "/employees/search"  do
-    @results = Employee.all(:lastname.like => "%#{params[:query]}%") | Employee.all(:firstname.like => "%#{params[:query]}%")
-    haml :"employee/results"
-  end
+  # post "/employees/search"  do
+  #  @results = Employee.all(:lastname.like => "%#{params[:query]}%") | Employee.all(:firstname.like => "%#{params[:query]}%")
+  #  haml :"employee/results"
+  # end
 
   get "/employees/:id/edit/?" do
     login_required 

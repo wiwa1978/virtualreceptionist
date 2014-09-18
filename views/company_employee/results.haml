@@ -3,7 +3,7 @@
   .span12
     %ul.thumbnails
       %hr.colorgraph/
-      - @results.each do |result|
+      - @results.employees.each do |result|
         %li.span5.clearfix
           .thumbnail.clearfix
             %img.pull-left.span2.clearfix{:alt => "ALT NAME", :src => "http://placehold.it/100x100", :style => "margin-right:10px"}/
@@ -17,3 +17,4 @@
                 %b> Title:
       %hr.colorgraph/
 %a.btn.btn-primary.icon.pull-right{:href => "/employees/search"} New search
+
