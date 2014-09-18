@@ -109,15 +109,15 @@
     end
   end
 
-  #delete '/companies/:id/delete/?' do
-  #  login_required  
-  #  if current_user.site_admin? | current_user.admin?
-  #    Company.get(params[:id]).destroy
-  #    redirect '/companies'  
-  #  else
-  #     haml :"error_404"
-  #  end
-  #end
+  delete '/companies/:id/delete/?' do
+    login_required  
+    if current_user.site_admin? | current_user.admin?
+      Company.get(params[:id]).destroy
+      redirect '/companies'  
+    else
+       haml :"error_404"
+    end
+  end
 
   post '/companies/:id/upload' do
     unless params[:file] && (tmpfile = params[:file][:tempfile]) && (name = params[:file][:filename])
