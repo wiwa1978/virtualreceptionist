@@ -31,3 +31,8 @@ post '/message' do
     flash[:notice] = "Your contact person was informed that you are here"
     redirect "/"
 end
+
+
+get '/*' do
+  haml :error_404
+end

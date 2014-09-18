@@ -17,7 +17,7 @@
       @companies = Company.all(:order => :name)
       haml :"company/index"
     else
-      haml :"error_404"
+      haml :"error_403"
     end
   end
 
@@ -37,7 +37,7 @@
     if current_user.site_admin? | current_user.admin?
       haml :"/company/new"
     else
-       haml :"error_404"
+       haml :"error_403"
     end
   end
 
@@ -58,7 +58,7 @@
         redirect '/companies'
       end
     else
-       haml :"error_404"
+       haml :"error_403"
     end
   end
    
@@ -70,7 +70,7 @@
       @title = "Company Info"
       haml :"company/show"
     else
-       haml :"error_404"
+       haml :"error_403"
     end
   end
    
@@ -82,7 +82,7 @@
       @title = "Edit Company Info"
       haml :"company/edit"
      else
-       haml :"error_404"
+       haml :"error_403"
     end
   end
    
@@ -94,7 +94,7 @@
       company.update(:name => params[:name])
       redirect "/companies"
     else
-       haml :"error_404"
+       haml :"error_403"
     end
   end
    
@@ -105,7 +105,7 @@
       logger.info "Company deleted with id " + params[:id].to_s
       haml :"company/delete"
     else
-       haml :"error_404"
+       haml :"error_403"
     end
   end
 
@@ -115,7 +115,7 @@
       Company.get(params[:id]).destroy
       redirect '/companies'  
     else
-       haml :"error_404"
+       haml :"error_403"
     end
   end
 

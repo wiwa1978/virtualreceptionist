@@ -37,7 +37,7 @@
         redirect '/companies'
       end
     else
-      haml :"error_404"
+      haml :"error_403"
     end
   end
 

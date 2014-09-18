@@ -5,7 +5,7 @@
       @title = "New Employee"
       haml :"/employee/new"
     else
-      haml :"error_404"
+      haml :"error_403"
     end
   end
 
@@ -22,7 +22,7 @@
         redirect '/'
       end
     else
-      haml :"error_404"
+      haml :"error_403"
     end
   end
   
@@ -34,7 +34,7 @@
       @title = "Employee Info"
       haml :"employee/show"
     else
-      haml :"error_404"
+      haml :"error_403"
     end
   end
    
