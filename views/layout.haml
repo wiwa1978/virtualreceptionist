@@ -37,11 +37,15 @@
                 %li
                   %a{:href => "/employees"} Employees
               
-              
-              %ul.nav.navbar-nav.navbar-right
-                %li
-                  %a{:href => "/logout"} Logout #{current_user.email}
-              
+              - if current_user.exists?
+                %ul.nav.navbar-nav.navbar-right
+                  %li
+                    %a{:href => "/logout"} Logout #{current_user.email}
+              - else
+                %ul.nav.navbar-nav.navbar-right
+                  %li
+                    %a{:href => "/logout"} Logout
+                
           
     .container
       - flash.each do |key, value|

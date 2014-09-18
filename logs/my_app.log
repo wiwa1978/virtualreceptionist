@@ -278,3 +278,29 @@ I, [2014-09-18T23:26:46.183922 #8780]  INFO -- : Company deleted with id 1
 I, [2014-09-18T23:50:55.020875 #8963]  INFO -- : Company deleted with id 1
 I, [2014-09-18T23:51:56.350648 #9003]  INFO -- : Company deleted with id 1
 I, [2014-09-18T23:52:12.515471 #9026]  INFO -- : Company deleted with id 1
+I, [2014-09-19T00:50:54.052606 #3103]  INFO -- : Calling the index page
+I, [2014-09-19T00:50:55.669878 #3107]  INFO -- : Calling the index page
+I, [2014-09-19T00:51:01.188786 #3113]  INFO -- : Calling the index page
+I, [2014-09-19T00:51:02.565128 #3117]  INFO -- : Calling the index page
+I, [2014-09-19T00:51:05.331536 #3121]  INFO -- : Calling the index page
+I, [2014-09-19T00:51:11.820699 #3125]  INFO -- : Calling the index page
+I, [2014-09-19T00:51:13.774182 #3129]  INFO -- : Company create form loaded
+I, [2014-09-19T00:54:09.452262 #3355]  INFO -- : New company created with id 
+I, [2014-09-19T00:54:16.415612 #3398]  INFO -- : Calling the index page
+I, [2014-09-19T00:54:19.205180 #3416]  INFO -- : Company create form loaded
+I, [2014-09-19T00:54:34.428240 #3428]  INFO -- : New company created with id 
+I, [2014-09-19T00:54:42.573045 #3439]  INFO -- : Calling the index page
+I, [2014-09-19T00:54:45.963851 #3443]  INFO -- : Calling the index page
+I, [2014-09-19T00:55:03.288004 #3471]  INFO -- : Calling the index page
+I, [2014-09-19T00:55:04.782598 #3475]  INFO -- : Calling the index page
+I, [2014-09-19T00:55:09.570970 #3479]  INFO -- : Calling the index page
+I, [2014-09-19T00:55:12.740877 #3483]  INFO -- : Calling the index page
+I, [2014-09-19T00:55:24.076870 #3508]  INFO -- : Calling the index page
+I, [2014-09-19T00:55:26.735980 #3512]  INFO -- : Calling the index page
+I, [2014-09-19T00:55:32.864432 #3516]  INFO -- : Calling the index page
+I, [2014-09-19T00:56:18.177267 #3522]  INFO -- : Calling the index page
+I, [2014-09-19T00:56:20.902433 #3526]  INFO -- : Calling the index page
+I, [2014-09-19T00:57:35.531920 #3596]  INFO -- : Calling the index page
+I, [2014-09-19T00:57:36.909123 #3600]  INFO -- : Calling the index page
+I, [2014-09-19T00:57:38.751394 #3604]  INFO -- : Calling the index page
+I, [2014-09-19T00:58:29.332802 #3650]  INFO -- : Calling the index page

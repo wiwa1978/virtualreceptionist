@@ -57,7 +57,7 @@
     end
     
     CSV.foreach('public/uploads/' + params[:file][:filename].to_s, :headers => true) do |csv_obj|
-      employee = Employee.new(:company_id => 1, :firstname => csv_obj['firstname'], :lastname => csv_obj['lastname'], :phone => csv_obj['phone'], :created_at => Time.now,:updated_at => Time.now)
+      employee = Employee.new(:company_id => params[:id], :firstname => csv_obj['firstname'], :lastname => csv_obj['lastname'], :phone => csv_obj['phone'], :created_at => Time.now,:updated_at => Time.now)
       employee.save
     end
 
