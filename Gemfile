@@ -10,7 +10,7 @@ gem "haml"
 gem "rack-flash3"
 gem 'twilio-ruby'
 gem 'trollop'
-gem "sinatra-can"
+gem "rack-flash-session"
 
 group :development do
   gem "shotgun"

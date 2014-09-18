@@ -9,6 +9,8 @@ require 'digest/sha1'
 require 'haml'
 require 'rack-flash'
 require 'csv'
+require 'rack/flash/test'
+
 
 use Rack::Flash
 enable :sessions
