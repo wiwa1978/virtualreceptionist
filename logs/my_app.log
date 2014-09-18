@@ -271,3 +271,10 @@ I, [2014-09-18T23:21:21.998031 #8572]  INFO -- : Calling the index page
 I, [2014-09-18T23:21:23.912914 #8576]  INFO -- : Calling the index page
 I, [2014-09-18T23:21:41.787585 #8607]  INFO -- : Calling the index page
 I, [2014-09-18T23:21:44.865728 #8611]  INFO -- : Calling the index page
+I, [2014-09-18T23:25:25.281292 #8711]  INFO -- : Calling the index page
+I, [2014-09-18T23:26:12.590159 #8746]  INFO -- : Calling the index page
+I, [2014-09-18T23:26:40.962942 #8776]  INFO -- : Company updated form loaded for company with id 1
+I, [2014-09-18T23:26:46.183922 #8780]  INFO -- : Company deleted with id 1
+I, [2014-09-18T23:50:55.020875 #8963]  INFO -- : Company deleted with id 1
+I, [2014-09-18T23:51:56.350648 #9003]  INFO -- : Company deleted with id 1
+I, [2014-09-18T23:52:12.515471 #9026]  INFO -- : Company deleted with id 1

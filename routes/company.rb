@@ -74,7 +74,7 @@
     end
   end
    
-  get "/companies/edit/:id/?" do
+  get "/companies/:id/edit/?" do
     login_required  
     if current_user.site_admin? | current_user.admin?
       @company = Company.get(params[:id])
@@ -101,7 +101,7 @@
   get '/companies/:id/delete/?' do
     login_required  
     if current_user.site_admin? | current_user.admin? 
-      @employee = Company.get(params[:id])
+      @company = Company.get(params[:id])
       logger.info "Company deleted with id " + params[:id].to_s
       haml :"company/delete"
     else
@@ -109,15 +109,15 @@
     end
   end
 
-  delete '/companies/:id/delete/?' do
-    login_required  
-    if current_user.site_admin? | current_user.admin?
-      Company.get(params[:id]).destroy
-      redirect '/companies'  
-    else
-       haml :"error_404"
-    end
-  end
+  #delete '/companies/:id/delete/?' do
+  #  login_required  
+  #  if current_user.site_admin? | current_user.admin?
+  #    Company.get(params[:id]).destroy
+  #    redirect '/companies'  
+  #  else
+  #     haml :"error_404"
+  #  end
+  #end
 
   post '/companies/:id/upload' do
     unless params[:file] && (tmpfile = params[:file][:tempfile]) && (name = params[:file][:filename])
