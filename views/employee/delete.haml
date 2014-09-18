@@ -3,7 +3,7 @@
   %p
     = @employee.firstname
     = @employee.lastname
-%form{:action => "/employees/delete/#{@employee.id}", :method => "POST"}
+%form{:action => "/employees/#{@employee.id}/delete/", :method => "POST"}
   %input{:name => "_method", :type => "hidden", :value => "delete"}/
   %input.btn.btn-primary{:type => "submit", :value => "Delete"}/
   or

@@ -2,7 +2,7 @@
 %blockquote
   %p
     = @company.name
-%form{:action => "/companies/delete/#{@company.id}", :method => "POST"}
+%form{:action => "/companies/#{@company.id}/delete/", :method => "POST"}
   %input{:name => "_method", :type => "hidden", :value => "delete"}/
   %input.btn.btn-primary{:type => "submit", :value => "Delete"}/
   or
