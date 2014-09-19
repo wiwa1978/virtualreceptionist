@@ -6,7 +6,7 @@
       @companies = Company.all
       haml :"employee/index"
     else
-      haml :"error_404"
+      redirect '/error_403'
     end
   end
 
@@ -28,7 +28,7 @@
       @title = "Edit Employee Info"
       haml :"employee/edit"
     else
-      haml :"error_403"
+      redirect '/error_403'
     end
   end
    
@@ -40,7 +40,7 @@
       employee.update(:firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone])
       redirect "/employees"
     else
-      haml :"error_403"
+      redirect '/error_403'
     end
   end
    
@@ -51,7 +51,7 @@
       logger.info "Employee deleted with id " + params[:id].to_s
       haml :"employee/delete"
     else
-      haml :"error_403"
+      redirect '/error_403'
     end
   end
 
@@ -61,7 +61,7 @@
       Employee.get(params[:id]).destroy
       redirect '/employees' 
     else
-      haml :"error_403"
+      redirect '/error_403'
     end 
   end
 

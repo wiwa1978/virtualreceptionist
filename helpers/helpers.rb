@@ -24,6 +24,13 @@ helpers do
       logger = Logger.new(log_file)
   end
 
+  def log_to_db(level, event)
+    if current_user.site_admin? | current_user.admin?
+        history = History.new(:level => level, :event => event,:created_at => Time.now)
+        history.save
+      end
+  end
+
   def flash_class(level)
     case level
         when :notice then "alert alert-info"

@@ -5,7 +5,7 @@ gem "thin"
 gem "datamapper"
 gem "dm-postgres-adapter"
 gem "sinatra-flash"
-gem "sinatra-authentication"
+gem "sinatra-authentication",  :git => 'https://github.com/wymedia/sinatra-authentication.git'
 gem "haml"
 gem "rack-flash3"
 gem 'twilio-ruby'

@@ -16,3 +16,10 @@ task :upgrade do
   require './main'
   DataMapper.auto_upgrade! 
 end
+
+desc 'Load the seed data from db/seeds.rb'
+task :seed do
+	require './main'
+	seed_file = File.join('db/seeds.rb')
+  	load(seed_file) if File.exist?(seed_file)
+end

@@ -2,7 +2,11 @@
     #login_required
     #logger.info "Calling the index page"
     #redirect "/employees/search"
-    redirect "/companies/logo"
+    if logged_in?
+      redirect "/companies"
+    else
+      redirect "/companies/logo"
+    end
   end
 
   get "/companies/logo?" do
@@ -17,7 +21,7 @@
       @companies = Company.all(:order => :name)
       haml :"company/index"
     else
-      haml :"error_403"
+      redirect '/error_403'
     end
   end
 
@@ -28,7 +32,7 @@
       @title = "New Company"
       haml :"/company/new"
     else
-       haml :"error_404"
+      redirect '/error_403'
     end
   end
 
@@ -37,7 +41,7 @@
     if current_user.site_admin? | current_user.admin?
       haml :"/company/new"
     else
-       haml :"error_403"
+      redirect '/error_403'
     end
   end
 
@@ -58,7 +62,7 @@
         redirect '/companies'
       end
     else
-       haml :"error_403"
+      redirect '/error_403'
     end
   end
    
@@ -70,7 +74,7 @@
       @title = "Company Info"
       haml :"company/show"
     else
-       haml :"error_403"
+      redirect '/error_403'
     end
   end
    
@@ -82,7 +86,7 @@
       @title = "Edit Company Info"
       haml :"company/edit"
      else
-       haml :"error_403"
+      redirect '/error_403'
     end
   end
    
@@ -94,7 +98,7 @@
       company.update(:name => params[:name])
       redirect "/companies"
     else
-       haml :"error_403"
+      redirect '/error_403'
     end
   end
    
@@ -105,7 +109,7 @@
       logger.info "Company deleted with id " + params[:id].to_s
       haml :"company/delete"
     else
-       haml :"error_403"
+      redirect '/error_403'
     end
   end
 
@@ -115,7 +119,7 @@
       Company.get(params[:id]).destroy
       redirect '/companies'  
     else
-       haml :"error_403"
+      redirect '/error_403'
     end
   end
 

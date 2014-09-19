@@ -10,7 +10,7 @@
       @companies = Company.get(params[:id])
       haml :"company_employee/index"
     else
-      haml :"error_404"
+      redirect '/error_403'
     end
   end
 
@@ -22,7 +22,7 @@
       @company = Company.get(params[:id])
       haml :"/company_employee/new"
     else
-      haml :"error_404"
+      redirect '/error_403'
     end
   end
 
@@ -38,7 +38,7 @@
         redirect '/companies'
       end
     else
-      haml :"error_403"
+      redirect '/error_403'
     end
   end
 

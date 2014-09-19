@@ -1,15 +1,21 @@
 
 #sinatra_authentication
-.row
-  .span12
-    %form{ :action => "/signup", :method => "post"}
-      %h1= 'Sign Up'
-      %br
-      %input.form-input{:id => "user_email", :name => "user[email]", :type => "text", :size => "20", :placeholder => "Email"}
-      %br
-      %input.form-input{:id => "user_password", :name => "user[password]", :type => "password", :size => "20",:placeholder => "Password"}
-      %br
-      %input.form-input{ :id => "user_password_confirmation", :name => "user[password_confirmation]", :type => "password", :size => "30", :placeholder => "Confirm Password"}
-      %br
-      %br
-      %input.btn.btn-primary{ :name => "submit", :type => "submit", :value => "Sign up"}
+
+.row{:style => "margin-top:20px"}
+  .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
+    %form{:role => "form", :action => "/signup", :method => "post"}
+      %fieldset
+        %h2 Sign up
+        %hr.colorgraph/
+        .form-group
+          %input#email.form-control.input-lg{:id => "user_email", :name => "user[email]", :type => "text", :size => "20", :placeholder => "Email"}/
+        .form-group
+          %input#password.form-control.input-lg{:id => "user_password", :name => "user[password]", :type => "password", :size => "20",:placeholder => "Password"}/
+        .form-group
+          %input#password.form-control.input-lg{ :id => "user_password_confirmation", :name => "user[password_confirmation]", :type => "password", :size => "30", :placeholder => "Confirm Password"}/
+        
+        %hr.colorgraph/
+        .row
+          .col-xs-6.col-sm-6.col-md-6
+            %input.btn.btn-lg.btn-success.btn-block{:type => "submit", :value => "Sign Up"}/
+       
