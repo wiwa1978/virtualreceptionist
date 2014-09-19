@@ -1,4 +1,4 @@
-get '/error_404' do
+get '/error_404' do	
   haml :error_404
 end
 

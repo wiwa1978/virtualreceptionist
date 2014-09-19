@@ -17,7 +17,6 @@
   get "/companies/?" do
     login_required
     if current_user.site_admin? | current_user.admin?
-      logger.info "Calling the index page"
       @companies = Company.all(:order => :name)
       haml :"company/index"
     else
@@ -53,10 +52,11 @@
     
     if current_user.site_admin? | current_user.admin?
       company = Company.new(:name => params[:name], :logo => params[:file][:filename],:created_at => Time.now,:updated_at => Time.now)
-      logger.info "New company created with id " + params[:id].to_s
+      
       if company.save
         flash[:notice] = "Company saved successfully."
         redirect '/'
+        logger.info "Company saved successfully with id " + params[:id].to_s + ": " + params[:name]
       else 
         flash[:error] = "Company could not be saved."
         redirect '/companies'
@@ -117,7 +117,7 @@
     login_required  
     if current_user.site_admin? | current_user.admin?
       Company.get(params[:id]).destroy
-      redirect '/companies'  
+      redirect '/companies' 
     else
       redirect '/error_403'
     end

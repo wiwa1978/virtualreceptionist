@@ -3,6 +3,11 @@
     haml :"company_employee/results"
   end
 
+  get "/companies/:id/employees/results2?" do
+    @results = Company.get(params[:id])
+    haml :"company_employee/results2"
+  end
+
   get "/companies/:id/employees/?" do
     login_required  
     if current_user.site_admin? | current_user.admin?
@@ -61,6 +66,7 @@
     CSV.foreach('public/uploads/' + params[:file][:filename].to_s, :headers => true) do |csv_obj|
       employee = Employee.new(:company_id => params[:id], :firstname => csv_obj['firstname'], :lastname => csv_obj['lastname'], :phone => csv_obj['phone'], :created_at => Time.now,:updated_at => Time.now)
       employee.save
+      log_to_db("INFO", "Employee saved successfully for company (CSV) " + params[:company_id].to_s + ": " + params[:firstname].to_s + " " +params[:lastname].to_s )
     end
 
     flash[:success] = "Employees inserted successfully"
@@ -72,8 +78,10 @@
     employees = Employee.all
     
     employees.each do |employee|
-      puts employee[:firstname]
+      #puts employee[:firstname]
       employee.destroy
+      log_to_db("INFO", "Employee deleted successfully for company" + params[:id].to_s + ": " + employee[:firstname].to_s + " " + employee[:lastname].to_s )
+
     end
     redirect '/'
 

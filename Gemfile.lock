@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/wymedia/sinatra-authentication.git
-  revision: cc314903a6ee9672028e7540e382e5c418fba26f
+  revision: 8604e1360ac0f60b1426ead5a45430a12ae5c6e3
   specs:
     sinatra-authentication (0.4.2)
       dm-core

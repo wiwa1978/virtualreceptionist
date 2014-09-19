@@ -1,0 +1,16 @@
+%h3 History
+%table.table.table-bordered
+  %hr
+  %thead
+    %tr
+      %th Id
+      %th Level
+      %th Event
+      %th Created
+  %tbody
+    - @histories.each do |history|
+      %tr
+        %td= history[:id]
+        %td= history[:level]
+        %td= history[:event]
+        %td= pretty_date(history[:created_at])

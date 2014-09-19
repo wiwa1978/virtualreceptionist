@@ -1,2 +1,23 @@
-I, [2014-09-19T14:02:51.591570 #13891]  INFO -- : Calling the index page
-I, [2014-09-19T14:31:17.042624 #15161]  INFO -- : Calling the index page
+I, [2014-09-19T15:59:40.359501 #17787]  INFO -- : Company create form loaded
+I, [2014-09-19T16:25:33.415090 #18042]  INFO -- : Company create form loaded
+I, [2014-09-19T16:27:41.062921 #18118]  INFO -- : Company create form loaded
+I, [2014-09-19T16:35:48.523854 #18282]  INFO -- : Company create form loaded
+I, [2014-09-19T16:35:48.658360 #18282]  INFO -- : Company create form loaded again
+I, [2014-09-19T16:36:40.771710 #18358]  INFO -- : Company create form loaded
+I, [2014-09-19T16:37:13.823337 #18393]  INFO -- : Company create form loaded
+I, [2014-09-19T16:38:18.603636 #18441]  INFO -- : Company create form loaded
+I, [2014-09-19T16:45:12.440994 #18867]  INFO -- : Calling the index page
+I, [2014-09-19T16:50:15.673691 #19052]  INFO -- : Calling the index page
+I, [2014-09-19T16:52:10.941901 #19155]  INFO -- : Company create form loaded
+I, [2014-09-19T18:01:01.192453 #4105]  INFO -- : Calling the index page
+I, [2014-09-19T18:01:15.008039 #4114]  INFO -- : Employee updated form loaded for employee with id 51
+I, [2014-09-19T18:01:19.804227 #4118]  INFO -- : Employee updated with id 51
+I, [2014-09-19T18:01:20.451717 #4122]  INFO -- : Calling the index page
+I, [2014-09-19T18:10:18.309826 #4324]  INFO -- : Calling the index page
+I, [2014-09-19T18:10:26.758311 #4339]  INFO -- : Calling the index page
+I, [2014-09-19T18:10:33.733445 #4347]  INFO -- : Calling the index page
+I, [2014-09-19T18:10:52.651323 #4376]  INFO -- : Calling the index page
+I, [2014-09-19T18:16:41.425112 #4690]  INFO -- : Calling the index page
+I, [2014-09-19T18:16:50.646091 #4696]  INFO -- : Calling the index page
+I, [2014-09-19T18:17:21.812298 #4721]  INFO -- : Company create form loaded
+I, [2014-09-19T18:17:57.072548 #4727]  INFO -- : Calling the index page

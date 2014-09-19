@@ -20,7 +20,7 @@ end
 
 
 post '/message' do
-    login_required
+    #login_required
     @phone_number = params[:phone_number]
 
     @client.account.sms.messages.create(
@@ -30,9 +30,4 @@ post '/message' do
     )
     flash[:notice] = "Your contact person was informed that you are here"
     redirect "/"
-end
-
-
-get '/*' do
-  haml :error_404
 end
