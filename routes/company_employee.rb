@@ -4,10 +4,10 @@
     haml :"company_employee/results"
   end
 
-  get "/companies/:id/employees/results2?" do
+  get "/companies/:id/employees/results_variant?" do
     login_required 
     @results = Company.get(params[:id])
-    haml :"company_employee/results2"
+    haml :"company_employee/results_variant"
   end
 
   get "/companies/:id/employees/?" do

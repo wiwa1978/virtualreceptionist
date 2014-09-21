@@ -1,0 +1,27 @@
+%h3 Contact persons found
+%hr
+.row
+  .col-lg-4.col-lg-offset-14
+    %input#search.form-control{:placeholder => "Search", :type => "search", :value => ""}/
+%hr
+.row
+  .col-lg-12
+    %table.table.table-bordered#table.table
+      %thead
+        %tr
+          %th Id
+          %th First Name
+          %th Last Name
+          %th Actions
+      %tbody
+        - @results.employees.each do |result|
+          %tr
+            %td= result.id
+            %td= result.firstname
+            %td= result.lastname
+            %td
+              %form#enter_number{:action => "/message", :method => "POST"}
+                %input#phone_number{:name => "phone_number", :type => "hidden", :value => result.phone}/
+                %input.btn.btn-primary.icon.pull-right{:type => "submit", :value => "Contact"}/
+
+    %hr/
