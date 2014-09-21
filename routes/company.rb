@@ -1,15 +1,17 @@
   get "/?" do
-    #login_required
+    login_required
     #logger.info "Calling the index page"
     #redirect "/employees/search"
-    if logged_in?
+    if logged_in? & current_user.admin?
       redirect "/companies"
-    else
+    elsif logged_in? & !current_user.admin?
       redirect "/companies/logo"
+    
     end
   end
 
   get "/companies/logo?" do
+      login_required
       @companies = Company.all(:order => :name)
       haml :"company/logo"
   end
@@ -27,7 +29,6 @@
   get "/companies/new/?" do
     login_required
     if current_user.site_admin? | current_user.admin?
-      logger.info "Company create form loaded"
       @title = "New Company"
       haml :"/company/new"
     else

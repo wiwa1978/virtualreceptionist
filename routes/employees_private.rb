@@ -1,7 +1,6 @@
   get "/employees/new/?" do
     login_required  
     if current_user.site_admin? | current_user.admin?
-      logger.info "Employee create form loaded"
       @title = "New Employee"
       haml :"/employee/new"
     else
@@ -12,8 +11,7 @@
   post "/employees/?" do
     login_required
     if current_user.site_admin? | current_user.admin?
-      employee = Employee.new(:firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone], :created_at => Time.now,:updated_at => Time.now)
-      logger.info "New employee created with id " + params[:id].to_s
+      employee = Employee.new(:firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone],:email => params[:email], :created_at => Time.now,:updated_at => Time.now)
       if employee.save
         flash[:notice] = "Employee saved successfully."
         redirect '/'
@@ -30,7 +28,6 @@
     login_required
     if current_user.site_admin? | current_user.admin?
       @employee = Employee.get(params[:id])
-      logger.info "Employee information for employee with id " + params[:id].to_s
       @title = "Employee Info"
       haml :"employee/show"
     else

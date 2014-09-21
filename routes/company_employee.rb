@@ -1,9 +1,11 @@
   get "/companies/:id/employees/results?" do
+    login_required 
     @results = Company.get(params[:id])
     haml :"company_employee/results"
   end
 
   get "/companies/:id/employees/results2?" do
+    login_required 
     @results = Company.get(params[:id])
     haml :"company_employee/results2"
   end
@@ -11,7 +13,6 @@
   get "/companies/:id/employees/?" do
     login_required  
     if current_user.site_admin? | current_user.admin?
-      logger.info "Calling the index page"
       @companies = Company.get(params[:id])
       haml :"company_employee/index"
     else
@@ -34,7 +35,7 @@
   post "/companies/:id/employees/?" do
     login_required  
     if current_user.site_admin? | current_user.admin?
-      employee = Employee.new(:company_id => params[:company_id], :firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone], :created_at => Time.now,:updated_at => Time.now)
+      employee = Employee.new(:company_id => params[:company_id], :firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone], :email => params[:email], :created_at => Time.now,:updated_at => Time.now)
       if employee.save
         flash[:notice] = "Employee saved successfully."
         redirect '/companies'
@@ -64,9 +65,9 @@
     end
     
     CSV.foreach('public/uploads/' + params[:file][:filename].to_s, :headers => true) do |csv_obj|
-      employee = Employee.new(:company_id => params[:id], :firstname => csv_obj['firstname'], :lastname => csv_obj['lastname'], :phone => csv_obj['phone'], :created_at => Time.now,:updated_at => Time.now)
+      puts csv_obj['firstname']
+      employee = Employee.new(:company_id => params[:id], :firstname => csv_obj['firstname'], :lastname => csv_obj['lastname'], :phone => csv_obj['phone'], :email => csv_obj['email'], :created_at => Time.now,:updated_at => Time.now)
       employee.save
-      log_to_db("INFO", "Employee saved successfully for company (CSV) " + params[:company_id].to_s + ": " + params[:firstname].to_s + " " +params[:lastname].to_s )
     end
 
     flash[:success] = "Employees inserted successfully"
@@ -78,10 +79,7 @@
     employees = Employee.all
     
     employees.each do |employee|
-      #puts employee[:firstname]
       employee.destroy
-      log_to_db("INFO", "Employee deleted successfully for company" + params[:id].to_s + ": " + employee[:firstname].to_s + " " + employee[:lastname].to_s )
-
     end
     redirect '/'
 

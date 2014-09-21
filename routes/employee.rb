@@ -2,7 +2,6 @@
   get "/employees/?" do
     login_required  
     if current_user.site_admin? | current_user.admin?
-      logger.info "Calling the index page"
       #@employees = Employee.all(:order => :created_at.desc)
       @companies = Company.all
       haml :"employee/index"
@@ -25,7 +24,6 @@
     login_required 
     if current_user.site_admin? | current_user.admin?
       @employee = Employee.get(params[:id])
-      logger.info "Employee updated form loaded for employee with id " + params[:id].to_s 
       @title = "Edit Employee Info"
       haml :"employee/edit"
     else
@@ -37,8 +35,7 @@
     login_required
     if current_user.site_admin? | current_user.admin?
       employee = Employee.get(params[:id])
-      logger.info "Employee updated with id " + params[:id].to_s
-      employee.update(:firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone])
+      employee.update(:firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone], :email => params[:email])
       redirect "/employees"
     else
       redirect '/error_403'
@@ -49,7 +46,6 @@
     login_required
     if current_user.site_admin? | current_user.admin?
       @employee = Employee.get(params[:id])
-      logger.info "Employee deleted with id " + params[:id].to_s
       haml :"employee/delete"
     else
       redirect '/error_403'

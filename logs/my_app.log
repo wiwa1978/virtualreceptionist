@@ -21,3 +21,6 @@ I, [2014-09-19T18:16:41.425112 #4690]  INFO -- : Calling the index page
 I, [2014-09-19T18:16:50.646091 #4696]  INFO -- : Calling the index page
 I, [2014-09-19T18:17:21.812298 #4721]  INFO -- : Company create form loaded
 I, [2014-09-19T18:17:57.072548 #4727]  INFO -- : Calling the index page
+I, [2014-09-20T19:40:12.134405 #16099]  INFO -- : Company updated form loaded for company with id 1
+I, [2014-09-20T19:40:14.625353 #16103]  INFO -- : Company updated with id 1
+I, [2014-09-20T19:40:18.274843 #16111]  INFO -- : Company deleted with id 1

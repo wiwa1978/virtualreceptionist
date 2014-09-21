@@ -8,6 +8,7 @@
     %link{:href => "/css/table_filter.css", :rel => "stylesheet"}/
     %link{:href => "/css/wizard.css", :rel => "stylesheet"}/
     %link{:href => "/css/logo.css", :rel => "stylesheet"}
+    %link{:href => "/css/contactlist.css", :rel => "stylesheet"}
 
     :css
       body {
@@ -18,7 +19,7 @@
         padding: 15px 0;
       }
   %body
-    - if logged_in?
+    - if logged_in? & current_user.admin?
       .container
         .navbar.navbar-default{:role => "navigation"}
           .container-fluid
@@ -61,6 +62,7 @@
     %script{:src => "/js/table_filter.js"}
     %script{:src => "/js/wizard.js"}
     %script{:src => "//rawgithub.com/stidges/jquery-searchable/master/dist/jquery.searchable-1.0.0.min.js"}
+    %script{:src => "/js/contactlist.js"}
 
 
 
