@@ -17,9 +17,9 @@
         %ul#contact-list.list-group
           %li.list-group-item
             .col-xs-12.col-sm-3
-              %img.img-responsive.img-circle{:alt => result.lastname, :src => "http://api.randomuser.me/portraits/men/49.jpg"}/
+              %span.name
             .col-xs-12.col-sm-9
-              %span.name= result.lastname
+              %span.name= result.firstname + " " + result.firstname
               %br/
               %form#enter_number{:action => "/message", :method => "POST"}
                 %input#phone_number{:name => "phone_number", :type => "hidden", :value => result.phone}/
@@ -36,3 +36,4 @@
                 %br/
 
             .clearfix
+%a.btn.btn-primary.pull-right{:href => "/"} Terug
