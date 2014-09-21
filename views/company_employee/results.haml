@@ -19,7 +19,7 @@
             .col-xs-12.col-sm-3
               %span.name
             .col-xs-12.col-sm-9
-              %span.name= result.firstname + " " + result.firstname
+              %span.name= result.firstname + " " + result.lastname
               %br/
               %form#enter_number{:action => "/message", :method => "POST"}
                 %input#phone_number{:name => "phone_number", :type => "hidden", :value => result.phone}/
