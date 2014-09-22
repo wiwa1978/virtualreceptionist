@@ -5,7 +5,7 @@ class Employee
   property :firstname,    String,	required: true, length: 1..20
   property :lastname,     String,   required: true, length: 1..30
   property :phone,        String,   required: true, length: 1..13
-  property :email,		  String,	:required => true, length: 1..60, :format => :email_address
+  property :email,		  String,	required: true, length: 1..60, :format => :email_address
   property :created_at,   DateTime
   property :updated_at,   DateTime
 
