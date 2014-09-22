@@ -40,4 +40,10 @@ helpers do
     end
   end
 
+
+  def companyname(id)
+    @company = Company.get(id)
+    companiename = @company.name
+  end
+
 end

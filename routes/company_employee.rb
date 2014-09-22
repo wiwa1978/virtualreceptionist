@@ -37,7 +37,7 @@
     if current_user.site_admin? | current_user.admin?
       employee = Employee.new(:company_id => params[:company_id], :firstname => params[:firstname], :lastname => params[:lastname], :phone => params[:phone], :email => params[:email], :created_at => Time.now,:updated_at => Time.now)
       if employee.save
-        flash[:notice] = "Employee saved successfully."
+        flash[:notice] = "Employee saved successfully for company " + companyname(params[:company_id])
         redirect '/companies'
       else 
         flash[:error] = "Employee could not be saved."
