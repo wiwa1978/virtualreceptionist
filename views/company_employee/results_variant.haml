@@ -1,39 +1,24 @@
+%h3 Contact persons found
+%hr
 .row
-  .col-xs-12.col-sm-offset-3.col-sm-6
-    .panel.panel-default
-      .panel-heading.c-list
-        %span.title Contacts found
-     
-      .row{:style => "display: none;"}
-        .col-xs-12
-          .input-group.c-search
-            %input#contact-list-search.form-control{:type => "text"}/
-            %span.input-group-btn
-              %button.btn.btn-default{:type => "button"}
-                %span.glyphicon.glyphicon-search.text-muted
-      
-      - @results.employees.each do |result|
-        %ul#contact-list.list-group
-          %li.list-group-item
-            .col-xs-12.col-sm-3
-              %span.name
-            .col-xs-12.col-sm-9
-              %span.name= result.firstname + " " + result.lastname
-              %br/
+  .col-lg-4.col-lg-offset-14
+    %input#search.form-control{:placeholder => "Search", :type => "search", :value => ""}/
+%hr
+.row
+  .col-lg-12
+    %table.table.table-condensed#table.table
+      %thead
+        %tr
+          %th Naam
+          %th Acties
+      %tbody
+        - @results.employees.each do |result|
+          %tr
+            %td= result.firstname + " " + result.lastname
+            %td
               %form#enter_number{:action => "/message", :method => "POST"}
                 %input#phone_number{:name => "phone_number", :type => "hidden", :value => result.phone}/
                 %input#phone_number{:name => "email", :type => "hidden", :value => result.email}/
                 %input.btn.btn-primary.icon.pull-right{:type => "submit", :value => "Contact"}/
-             
-                %br/
-              %span.glyphicon.glyphicon-earphone.text-muted.c-info{"data-toggle" => "tooltip", :title => result.phone}
-              %span.visible-xs
-                %span.text-muted= result.phone
-                %br/
-              %span.fa.fa-comments.text-muted.c-info{"data-toggle" => "tooltip", :title => result.email}
-              %span.visible-xs
-                %span.text-muted= result.email
-                %br/
 
-            .clearfix
-%a.btn.btn-primary.pull-right{:href => "/"} Terug
+    %hr/
