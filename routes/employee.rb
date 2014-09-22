@@ -3,6 +3,7 @@
     login_required  
     if current_user.site_admin? | current_user.admin?
       @employees = Employee.all(:order => :id.desc)
+    
       haml :"employee/index"
     else
       redirect '/error_403'
@@ -54,8 +55,9 @@
   delete '/employees/:id/delete/?' do
     login_required 
     if current_user.site_admin? | current_user.admin? 
+     
       Employee.get(params[:id]).destroy
-      redirect '/employees' 
+      redirect '/companies'
     else
       redirect '/error_403'
     end 
