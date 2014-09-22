@@ -19,19 +19,18 @@
           %th Updated
           %th Actions
       %tbody
-        - @companies.each do |companie|
-          - companie.employees.each do |employee|
-            %tr
-              %td= employee.id
-              %td= employee.firstname
-              %td= employee.lastname
-              %td= companie.name
-              %td= employee.phone
-              %td= employee.email
-              %td= pretty_date(employee.created_at)
-              %td= pretty_date(employee.updated_at)
-              %td
-                %a.btn.btn-primary{:href => "/employees/#{employee[:id]}/edit"} Edit
-                %a.btn.btn-danger{:href => "/employees/#{employee[:id]}/delete"} Delete
+        - @employees.each do |employee|
+          %tr
+            %td= employee.id
+            %td= employee.firstname
+            %td= employee.lastname
+            %td= companyname(employee.company_id)
+            %td= employee.phone
+            %td= employee.email
+            %td= pretty_date(employee.created_at)
+            %td= pretty_date(employee.updated_at)
+            %td
+              %a.btn.btn-primary{:href => "/employees/#{employee[:id]}/edit"} Edit
+              %a.btn.btn-danger{:href => "/employees/#{employee[:id]}/delete"} Delete
     %hr/
 

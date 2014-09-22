@@ -2,8 +2,7 @@
   get "/employees/?" do
     login_required  
     if current_user.site_admin? | current_user.admin?
-      #@employees = Employee.all(:order => :created_at.desc)
-      @companies = Company.all
+      @employees = Employee.all(:order => :id.desc)
       haml :"employee/index"
     else
       redirect '/error_403'
