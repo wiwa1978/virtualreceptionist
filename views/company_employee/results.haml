@@ -3,8 +3,7 @@
     .panel.panel-default
       .panel-heading.c-list
         %span.title Contacts found
-
-        
+     
       .row{:style => "display: none;"}
         .col-xs-12
           .input-group.c-search
@@ -23,6 +22,7 @@
               %br/
               %form#enter_number{:action => "/message", :method => "POST"}
                 %input#phone_number{:name => "phone_number", :type => "hidden", :value => result.phone}/
+                %input#phone_number{:name => "email", :type => "hidden", :value => result.email}/
                 %input.btn.btn-primary.icon.pull-right{:type => "submit", :value => "Contact"}/
              
                 %br/

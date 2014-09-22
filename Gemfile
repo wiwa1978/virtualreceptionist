@@ -11,6 +11,7 @@ gem "rack-flash3"
 gem 'twilio-ruby'
 gem 'trollop'
 gem "rack-flash-session"
+gem 'pony'
 
 group :development do
   gem "shotgun"

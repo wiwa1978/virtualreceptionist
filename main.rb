@@ -10,14 +10,14 @@ require 'haml'
 require 'rack-flash'
 require 'csv'
 require 'rack/flash/test'
-
+require 'pony'
 
 use Rack::Flash
 enable :sessions
 
-
 use Rack::Session::Cookie, :secret => 'S3cr3t'
 set :sinatra_authentication_view_path, Pathname(__FILE__).dirname.expand_path + "views/authentication"
+
 
 configure :development do
 

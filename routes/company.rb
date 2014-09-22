@@ -12,6 +12,8 @@
 
   get "/companies/logo?" do
       login_required
+      @title = "Welkom in de Spinnerijstraat 12, 9240 Zele"
+      @subtitle = "Druk op een logo om je contactpersoon te kiezen"
       @companies = Company.all(:order => :name)
       haml :"company/logo"
   end

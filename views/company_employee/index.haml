@@ -34,7 +34,7 @@
             %td= pretty_date(employee.created_at)
             %td= pretty_date(employee.updated_at)
             %td
-              %a.btn.btn-primary{:href => "/employees/edit/#{employee[:id]}"} Edit
-              %a.btn.btn-danger{:href => "/employees/delete/#{employee[:id]}"} Delete
+              %a.btn.btn-primary{:href => "/employees/#{employee[:id]}/edit/"} Edit
+              %a.btn.btn-danger{:href => "/employees/#{employee[:id]}/delete/"} Delete
     %hr/
 
