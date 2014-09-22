@@ -12,6 +12,7 @@
 
   get "/companies/logo?" do
       login_required
+      response['Cache-Control'] = "public, max-age=0, must-revalidate"
       @title = "Welkom in de Spinnerijstraat 12, 9240 Zele"
       @subtitle = "Druk op een logo om je contactpersoon te kiezen"
       @companies = Company.all(:order => :name)
