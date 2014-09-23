@@ -21,25 +21,28 @@
             .col-xs-12.col-sm-9
               %span.name= result.firstname + " " + result.lastname
               %br/
+              %span.glyphicon.glyphicon-map-marker.text-muted.c-info{"data-toggle" => "tooltip", :title => "5842 Hillcrest Rd"}
+              %span.visible-xs
+                %span.text-muted 5842 Hillcrest Rd
+                %br/
+              %span.glyphicon.glyphicon-earphone.text-muted.c-info{"data-toggle" => "tooltip", :title => "(870) 288-4149"}
+              %span.visible-xs
+                %span.text-muted (870) 288-4149
+                %br/
+              %span.fa.fa-comments.text-muted.c-info{"data-toggle" => "tooltip", :title => "scott.stevens@example.com"}
+              %span.visible-xs
+                %span.text-muted scott.stevens@example.com
+                %br/
               %form#enter_number{:action => "/message", :method => "POST"}
                 %input#phone_number{:name => "phone_number", :type => "hidden", :value => result.phone}/
                 %input#phone_number{:name => "email", :type => "hidden", :value => result.email}/
                 %input.btn.btn-primary.icon.pull-right{:type => "submit", :value => "Contact"}/
+
+
+
+              
              
                 %br/
-              / %span.glyphicon.glyphicon-earphone.text-muted.c-info{"data-toggle" => "tooltip", :title => result.phone}
-              / %span.visible-xs
-              /  %span.text-muted= result.phone
-              /  %br/
-              / %span.fa.fa-comments.text-muted.c-info{"data-toggle" => "tooltip", :title => result.email}
-              / %span.visible-xs
-              /  %span.text-muted= result.email
-              /  %br/
-
             .clearfix
 %a.btn.btn-primary.pull-right{:href => "/"} Terug
-
-
-
-
 
