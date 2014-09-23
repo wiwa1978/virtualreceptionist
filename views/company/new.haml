@@ -12,7 +12,7 @@
         %a.btn.btn-default.btn-circle{:disabled => "disabled", :href => "#step-3", :type => "button"} 3
         %p Submit
   
-  %form.form-inline{:role => "form", :action => "/companies", :method => "POST", :enctype=>"multipart/form-data"}
+  %form.form-inline{:role => "form", :action => "/companies", :method => "POST" , "accept-charset" => "utf-8", :enctype=>"multipart/form-data"}
     #step-1.row.setup-content
       .col-xs-12
         .col-md-12

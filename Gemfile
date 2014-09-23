@@ -12,6 +12,7 @@ gem 'twilio-ruby'
 gem 'trollop'
 gem "rack-flash-session"
 gem 'pony'
+gem 'aws-s3'
 
 group :development do
   gem "shotgun"

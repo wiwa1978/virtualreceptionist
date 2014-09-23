@@ -11,6 +11,7 @@ require 'rack-flash'
 require 'csv'
 require 'rack/flash/test'
 require 'pony'
+require 'aws/s3'
 
 use Rack::Flash
 enable :sessions
