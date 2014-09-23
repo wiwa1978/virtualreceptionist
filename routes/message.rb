@@ -29,17 +29,18 @@ post '/message' do
     #login_required
     @phone_number = params[:phone_number]
     @email = params[:email]
-    puts @email
+    #puts @email
     @client.account.sms.messages.create(
         :from => @twilio_number,
         :to => @phone_number,
         :body => "Uw bezoeker is aangekomen. Gelieve naar de receptie te gaan"
     )
     flash[:notice] = "Uw contactpersoon werd geinformeerd via SMS"
-    
+
+
     Pony.mail(
             :to => @email,
-            :from => settings.email_username,
+            :from => "Wymedia <" + settings.email_username + ">" ,
             :subject => 'Bezoek aan de receptie',
             :body => 'Uw bezoeker is aangekomen aan de receptie.',
 
