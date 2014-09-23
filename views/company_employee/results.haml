@@ -17,7 +17,7 @@
           %li.list-group-item
             / .col-xs-12.col-sm-3
             /   %span.name
-            .col-sm-9
+            .col-sm-12
               %span.name= result.firstname + " " + result.lastname
               %br/
               %form#enter_number{:action => "/message", :method => "POST"}
@@ -36,7 +36,7 @@
               /  %br/
 
             .clearfix
-%a.btn.btn-primary.pull-right{:href => "/"} Terug
+%a.btn.btn-primary{:href => "/"} Terug
 
 
 
