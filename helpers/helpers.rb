@@ -50,8 +50,8 @@ helpers do
   def upload(filename, file)
     bucket = 'be.wymedia.customers.vminvest.images'
     AWS::S3::Base.establish_connection!(
-      :access_key_id     => ENV['ACCESS_KEY_ID'] || 'AKIAIGZIEXZ4PJEYH42A' ,
-      :secret_access_key => ENV['SECRET_ACCESS_KEY'] || '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' 
+      :access_key_id     => ENV['ACCESS_KEY_ID'] ||  ,
+      :secret_access_key => ENV['SECRET_ACCESS_KEY'] ||  
     )
     AWS::S3::S3Object.store(
       filename,
